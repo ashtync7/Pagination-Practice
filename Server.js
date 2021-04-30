@@ -1,7 +1,9 @@
 const express = require("express");
-
-
+const mongoose = require("mongoose")
+const User = require("./Users")
 const app = express()
+
+mongoose.connect('mongodb://localhost/pagination', { useNewUrlParser: true, useUnifiedTopology: true })
 
 const users = [
     { id: 1, name: 'User 1' },
@@ -33,7 +35,7 @@ app.get('/posts', paginatedResults(posts), (req, res) => {
 
 })
 
-app.get('/users', (req, res) => {
+app.get('/users', paginatedResults(User), (req, res) => {
     // const page = parseInt(req.query.page)
     // const limit = parseInt(req.query.limit)
 
