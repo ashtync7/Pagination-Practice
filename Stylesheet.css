@@ -24,3 +24,9 @@
     grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid black;
 }
+
+.first:hover, .next:hover, .previous:hover, .last:hover {
+    cursor: pointer;
+    background: black;
+    color: white;
+}
