@@ -111,12 +111,13 @@ function paginatedResults(model) {
             }
         }
         try {
-            results.results = await model.find()
-            results.results.slice(startIndex, startIndex + limit)
-            return results.results.sort()
             res.paginatedResults = results
+            results.results = await model.find().limit(limit).skip(startIndex).exec()
+            // results.results.sort((a, b) => a.toString().localeCompare(b))
+
 
             next()
+
         } catch (e) {
             res.status(500).json({ message: e.message })
         }
