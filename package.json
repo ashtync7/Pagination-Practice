@@ -2,11 +2,11 @@
   "name": "pagination-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Server.js",
   "scripts": {
-    "devStart": "nodemon server.js",
+    "devStart": "nodemon Server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node Server.js"
   },
   "repository": {
     "type": "git",
