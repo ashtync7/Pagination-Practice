@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose")
 const User = require("./Users")
 const app = express()
-const MONGODB_URI = process.env.MONGODB_URI
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://ashtyn:ashtyn@cluster0.r5yfh.mongodb.net/pagination?retryWrites=true&w=majority'
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
