@@ -4,6 +4,7 @@ About the project:
 Prerequisites:
     -- install npm 
     -- install mongoose
+    -- Install REST Client extension for VS Code
 
 1. Set up pagination:
     -- Add seed data to populate and test 
