@@ -2,8 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose")
 const User = require("./Users")
 const app = express()
+const MONGODB_URI = process.env.MONGODB_URI
 
-mongoose.connect('mongodb://localhost/pagination', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.once('open', async () => {
     if (await User.countDocuments().exec() > 0) return
