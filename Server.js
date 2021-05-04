@@ -38,4 +38,4 @@ app.get('/apps', async (req, res) => {
     res.json(result)
 })
 
-app.listen(4000)
+app.listen(process.env.PORT || 4000)
